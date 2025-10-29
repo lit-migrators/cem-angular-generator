@@ -1,5 +1,5 @@
 {
-  "name": "@lit-migrators/cem-angular-generator",
+  "name": "cem-angular-generator",
   "version": "1.0.0",
   "description": "Generate Angular wrapper libraries from Custom Elements Manifest output.",
   "license": "MIT",
