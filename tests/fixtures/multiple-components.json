@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A card component",
+          "name": "MyCard",
+          "tagName": "my-card",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "description": "Card title",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "elevated",
+              "type": {
+                "text": "boolean"
+              },
+              "optional": true,
+              "description": "Whether the card is elevated",
+              "privacy": "public"
+            }
+          ],
+          "events": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "my-card",
+          "declaration": {
+            "name": "MyCard"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/badge.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A badge component",
+          "name": "MyBadge",
+          "tagName": "my-badge",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "count",
+              "type": {
+                "text": "number"
+              },
+              "description": "Badge count",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'secondary' | 'success' | 'danger'"
+              },
+              "optional": true,
+              "description": "Badge color variant",
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "name": "badge-click",
+              "type": {
+                "text": "CustomEvent<number>"
+              },
+              "description": "Fired when badge is clicked"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "my-badge",
+          "declaration": {
+            "name": "MyBadge"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/tooltip.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A tooltip component",
+          "name": "MyTooltip",
+          "tagName": "my-tooltip",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "content",
+              "type": {
+                "text": "string"
+              },
+              "description": "Tooltip content",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "'top' | 'bottom' | 'left' | 'right'"
+              },
+              "optional": true,
+              "description": "Tooltip placement",
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "name": "show",
+              "type": {
+                "text": "CustomEvent<void>"
+              },
+              "description": "Fired when tooltip is shown"
+            },
+            {
+              "name": "hide",
+              "type": {
+                "text": "CustomEvent<void>"
+              },
+              "description": "Fired when tooltip is hidden"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "my-tooltip",
+          "declaration": {
+            "name": "MyTooltip"
+          }
+        }
+      ]
+    }
+  ]
+}

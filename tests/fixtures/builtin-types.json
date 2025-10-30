@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/form-field.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A form field component with built-in types",
+          "name": "FormField",
+          "tagName": "form-field",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string | number | boolean"
+              },
+              "description": "Field value",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "Array<string>"
+              },
+              "optional": true,
+              "description": "Available options",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "metadata",
+              "type": {
+                "text": "Record<string, any>"
+              },
+              "optional": true,
+              "description": "Additional metadata",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "validator",
+              "type": {
+                "text": "Function"
+              },
+              "optional": true,
+              "description": "Validation function",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "RegExp"
+              },
+              "optional": true,
+              "description": "Validation pattern",
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "name": "value-change",
+              "type": {
+                "text": "CustomEvent<string | number | boolean>"
+              },
+              "description": "Fired when value changes"
+            },
+            {
+              "name": "blur",
+              "type": {
+                "text": "FocusEvent"
+              },
+              "description": "Fired when field loses focus"
+            },
+            {
+              "name": "keydown",
+              "type": {
+                "text": "KeyboardEvent"
+              },
+              "description": "Fired on key down"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "form-field",
+          "declaration": {
+            "name": "FormField"
+          }
+        }
+      ]
+    }
+  ]
+}

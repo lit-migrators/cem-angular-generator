@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/data-grid.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A complex data grid component with sorting, filtering, and pagination",
+          "name": "DataGrid",
+          "tagName": "data-grid",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "GridData[]"
+              },
+              "description": "The data to display in the grid",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "columns",
+              "type": {
+                "text": "ColumnDefinition[]"
+              },
+              "description": "Column configuration",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "pageSize",
+              "type": {
+                "text": "number"
+              },
+              "optional": true,
+              "description": "Number of items per page",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "sortable",
+              "type": {
+                "text": "boolean"
+              },
+              "optional": true,
+              "description": "Enable sorting",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "filterable",
+              "type": {
+                "text": "boolean"
+              },
+              "optional": true,
+              "description": "Enable filtering",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "SelectionMode"
+              },
+              "optional": true,
+              "description": "Selection mode (single or multiple)",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "#internalState",
+              "type": {
+                "text": "any"
+              },
+              "description": "Private field that should be excluded",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_privateHelper",
+              "type": {
+                "text": "any"
+              },
+              "description": "Private field that should be excluded",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "refresh",
+              "description": "Refresh the grid data"
+            }
+          ],
+          "events": [
+            {
+              "name": "row-click",
+              "type": {
+                "text": "CustomEvent<RowClickDetail>"
+              },
+              "description": "Fired when a row is clicked"
+            },
+            {
+              "name": "sort-change",
+              "type": {
+                "text": "CustomEvent<SortChangeDetail>"
+              },
+              "description": "Fired when sorting changes"
+            },
+            {
+              "name": "filter-change",
+              "type": {
+                "text": "CustomEvent<FilterChangeDetail>"
+              },
+              "description": "Fired when filters change"
+            },
+            {
+              "name": "selection-change",
+              "type": {
+                "text": "CustomEvent<SelectionChangeDetail>"
+              },
+              "description": "Fired when selection changes"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "data-grid",
+          "declaration": {
+            "name": "DataGrid"
+          }
+        }
+      ]
+    }
+  ]
+}

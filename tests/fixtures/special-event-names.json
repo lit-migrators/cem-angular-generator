@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/event-component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Component with various event name formats",
+          "name": "EventComponent",
+          "tagName": "event-component",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "name": "item-selected",
+              "type": {
+                "text": "CustomEvent<string>"
+              },
+              "description": "Kebab case event"
+            },
+            {
+              "name": "itemDeselected",
+              "type": {
+                "text": "CustomEvent<string>"
+              },
+              "description": "Camel case event"
+            },
+            {
+              "name": "ITEM_DELETED",
+              "type": {
+                "text": "CustomEvent<string>"
+              },
+              "description": "Snake case event"
+            },
+            {
+              "name": "item.updated",
+              "type": {
+                "text": "CustomEvent<any>"
+              },
+              "description": "Dot notation event"
+            },
+            {
+              "name": "123-invalid",
+              "type": {
+                "text": "CustomEvent<void>"
+              },
+              "description": "Event starting with number"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "event-component",
+          "declaration": {
+            "name": "EventComponent"
+          }
+        }
+      ]
+    }
+  ]
+}

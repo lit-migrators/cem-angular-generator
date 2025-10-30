@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/my-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A simple button component",
+          "name": "MyButton",
+          "tagName": "my-button",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "optional": false,
+              "description": "The button label",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "optional": true,
+              "description": "Whether the button is disabled",
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "name": "buttonClick",
+              "type": {
+                "text": "CustomEvent<void>"
+              },
+              "description": "Fired when the button is clicked"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "my-button",
+          "declaration": {
+            "name": "MyButton"
+          }
+        }
+      ]
+    }
+  ]
+}

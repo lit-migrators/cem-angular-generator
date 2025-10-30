@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/simple-container.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A simple container with no properties or events",
+          "name": "SimpleContainer",
+          "tagName": "simple-container",
+          "customElement": true,
+          "members": [],
+          "events": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "simple-container",
+          "declaration": {
+            "name": "SimpleContainer"
+          }
+        }
+      ]
+    }
+  ]
+}

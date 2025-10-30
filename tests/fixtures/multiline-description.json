@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/my-panel.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "MyPanel",
+          "tagName": "my-panel",
+          "description": "Primary panel component.\n\nDisplays summarized information across multiple sections.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "heading",
+              "type": {
+                "text": "string"
+              },
+              "optional": false,
+              "description": "Panel heading displayed at the top."
+            },
+            {
+              "kind": "field",
+              "name": "sections",
+              "type": {
+                "text": "Array<PanelSection>"
+              },
+              "optional": false
+            }
+          ],
+          "events": [
+            {
+              "name": "section-change",
+              "type": {
+                "text": "CustomEvent<SectionChangeDetail>"
+              },
+              "description": "Emitted when the active section changes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

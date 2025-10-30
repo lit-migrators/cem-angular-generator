@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/secure-component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Component with private and protected members",
+          "name": "SecureComponent",
+          "tagName": "secure-component",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "publicProp",
+              "type": {
+                "text": "string"
+              },
+              "description": "Public property",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "privateProp",
+              "type": {
+                "text": "string"
+              },
+              "description": "Private property - should be excluded",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "protectedProp",
+              "type": {
+                "text": "string"
+              },
+              "description": "Protected property - should be excluded",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "#privateField",
+              "type": {
+                "text": "number"
+              },
+              "description": "Private field - should be excluded"
+            },
+            {
+              "kind": "field",
+              "name": "anotherPublic",
+              "type": {
+                "text": "boolean"
+              },
+              "optional": true,
+              "description": "Another public property",
+              "privacy": "public"
+            },
+            {
+              "kind": "property",
+              "name": "publicProperty",
+              "type": {
+                "text": "number"
+              },
+              "description": "Public property",
+              "privacy": "public"
+            },
+            {
+              "kind": "property",
+              "name": "privateProperty",
+              "type": {
+                "text": "number"
+              },
+              "description": "Private property - should be excluded",
+              "privacy": "private",
+              "modifiers": ["private"]
+            },
+            {
+              "kind": "property",
+              "name": "protectedProperty",
+              "type": {
+                "text": "number"
+              },
+              "description": "Protected property - should be excluded",
+              "modifiers": ["protected"]
+            }
+          ],
+          "events": []
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "secure-component",
+          "declaration": {
+            "name": "SecureComponent"
+          }
+        }
+      ]
+    }
+  ]
+}
