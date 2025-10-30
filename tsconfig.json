@@ -12,7 +12,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node10",
     "skipLibCheck": true,
-    "types": ["node"]
+    "types": [],
+    "typeRoots": []
   },
   "include": ["src/**/*.ts"],
   "exclude": ["dist", "node_modules"]
